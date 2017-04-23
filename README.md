@@ -4,7 +4,7 @@
 
 ### Android
 
-    sous 
+    voir sous http://ecol2.com/u/Bapp
 
 ### iOS
 
