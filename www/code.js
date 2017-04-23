@@ -18,7 +18,12 @@ FooterBar_ICA.onclick=function(choice){
 }
 List_ICA.onclick=function(choice){
   if(typeof choice == "object") return;
+  if (choice == 1) { ChangeForm(ICA_INF); }
   if (choice == 2) { ChangeForm(ICA_TDT); }
+  if (choice == 3) { ChangeForm(ICA_COR); }
+  if (choice == 4) { ChangeForm(ICA_FRC); }
+  if (choice == 5) { ChangeForm(ICA_TBL); }
+  if (choice == 6) { ChangeForm(ICA_PAO); }
 }
 List_ICASESSIONS.onclick=function(choice){
   if(typeof choice == "object") return;
@@ -26,7 +31,22 @@ List_ICASESSIONS.onclick=function(choice){
   if (choice == 2) { window.open('http://ecol2.com/timeline/date/embed/?lang=fr&initial_zoom=2&title=ICA%20-%202%C3%A8me%20semestre&source=1dxNZDig02rfAax-QLs7FgE4S5UJ8kOUm77_yBMJ7Aoo','_blank') }
   if (choice == 3) { window.open('http://ecol2.com/timeline/date/embed/?lang=fr&initial_zoom=2&title=ICA%20-%202e%20semestre&source=1TK_MqhUoX3wOBpAGQthDqG4WtF34SMnpHnBCdTQajdw','_blank') }
 }
+Header_ICAINF.onclick=function(){
+  ChangeForm(ICA)
+}
 Header_ICATDT.onclick=function(){
+  ChangeForm(ICA)
+}
+Header_ICACOR.onclick=function(){
+  ChangeForm(ICA)
+}
+Header_ICAFRC.onclick=function(){
+  ChangeForm(ICA)
+}
+Header_ICATBL.onclick=function(){
+  ChangeForm(ICA)
+}
+Header_ICAPAO.onclick=function(){
   ChangeForm(ICA)
 }
 FooterBar_GES.onclick=function(choice){
@@ -52,6 +72,9 @@ Header_GesCPT.onclick=function(){
 Header_GesJEU.onclick=function(){
   ChangeForm(GES)
 }
+Header_GesLVR.onclick=function(){
+  ChangeForm(GES)
+}
 Header_GesREF.onclick=function(){
   ChangeForm(GES)
 }
@@ -62,6 +85,12 @@ FooterBar_ECO.onclick=function(choice){
 }
 Header_ECO.onclick=function(){
   ChangeForm(HOM)
+}
+Header_EcoLVR.onclick=function(){
+  ChangeForm(ECO)
+}
+Header_EcoREF.onclick=function(){
+  ChangeForm(ECO)
 }
 Header_DIS.onclick=function(){
   ChangeForm(HOM)

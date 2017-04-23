@@ -1,12 +1,12 @@
-# A Blank PhoneGap App
+# Une app ecol2com
 
-## Usage
+## Utilisation
 
-### PhoneGap CLI
+### Android
 
-    $ phonegap create my-app --template blank
+    sous 
 
-### Desktop
+### iOS
 
 In your browser, open the file:
 
