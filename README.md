@@ -8,7 +8,5 @@
 
 ### iOS
 
-In your browser, open the file:
-
-    /www/index.html
+à venir... merci pour votre patience
 
