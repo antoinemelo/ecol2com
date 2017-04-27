@@ -1,629 +1,380 @@
-﻿<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta charset="utf-8">
-<title>ecol2com</title>
-<meta name="generator" content="NSB/AppStudio 6.2.3.1$ydkw" />
-<meta name='date' content='2017-04-23 18:16:51.614203' />
-<meta name='version' content='1.0.0' />
-<meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />
-<meta name='apple-mobile-web-app-capable' content='YES' />
-<meta name='mobile-web-app-capable' content='yes' />
-<meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
-<meta name='apple-mobile-web-app-title' content='' />
-<meta name='copyright' content='ecol2com' />
-<meta http-equiv='Content-Security-Policy' content="default-src *; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'; media-src * blob:; img-src * data:; connect-src *;" />
-<link rel='apple-touch-icon' href='nsb/images/LauncherIcon57.png' />
-<link rel='shortcut icon' sizes='192x192' href='nsb/images/192.png' />
-<link href="nsb/nsbstyle.css" rel="stylesheet">
-<script src="nsb/jquery.js"></script>
-<link href="nsb/jquery.modal.min.css" rel="stylesheet">
-<script src="nsb/hfunc.js"></script>
-<script src="nsb/jquery.modal.min.js"></script>
-<script src="nsb/jqmFunctions.js"></script>
-<link href="nsb/jquery.mobile.css" rel="stylesheet">
-<script src="nsb/jquery.mobile.js"></script>
-<script src="nsb/iscroll.js"></script>
-
-<style type="text/css">
-#HOM {background:inherit;}
-#entete_HOM { display:block; left:auto; right:auto; top:auto; bottom:auto; height:40px; width:100%;}
-
-#NavBar_HOM { display:block; left:auto; right:auto; top:auto; bottom:auto; height:40px; width:320px;}
-#Label_HOM { display:block; left:auto; right:auto; top:auto; bottom:auto; height:auto; width:auto;}
-#FooterBar_HOM {position:absolute; display:block;top:auto; height:auto; width:100%; height:auto; left:0px; bottom:0px;}
-#ICA {background:inherit;}
-#FooterBar_ICA {position:absolute; display:block;top:auto; height:auto; width:100%; height:auto; left:0px; bottom:0px;}
-#Header_ICA { display:block; width:100%; height:40px; left:0px; top:0px;}
-#List_ICA_scroller { display:block; overflow:hidden; width:100%; height:auto; left:auto; top:auto;}
-#List_ICA { display:block; left:auto; top:auto;}
-#List_ICASESSIONS_scroller { display:block; overflow:hidden; width:auto; height:auto; left:auto; top:auto;}
-#List_ICASESSIONS { display:block; left:auto; top:auto;}
-#ICA_INF {background:inherit;}
-#Header_ICAINF { display:block; width:100%; height:40px; left:0px; top:0px;}
-#HTMLview_ICAINF_scroller { display:block; overflow:hidden; width:auto; height:auto; left:auto; top:auto;}
-#HTMLview_ICAINF { left:0px; top:0px; height:auto; width:100%;}
-#ICA_TDT {background:inherit;}
-#Header_ICATDT { display:block; width:100%; height:40px; left:0px; top:0px;}
-#HTMLview_ICATDT_scroller { display:block; overflow:hidden; width:auto; height:auto; left:auto; top:auto;}
-#HTMLview_ICATDT { left:0px; top:0px; height:auto; width:100%;}
-#ICA_COR {background:inherit;}
-#Header_ICACOR { display:block; width:100%; height:40px; left:0px; top:0px;}
-#HTMLview_ICACOR_scroller { display:block; overflow:hidden; width:auto; height:auto; left:auto; top:auto;}
-#HTMLview_ICACOR { left:0px; top:0px; height:auto; width:100%;}
-#ICA_FRC {background:inherit;}
-#Header_ICAFRC { display:block; width:100%; height:40px; left:0px; top:0px;}
-#HTMLview_ICAFRC_scroller { display:block; overflow:hidden; width:auto; height:auto; left:auto; top:auto;}
-#HTMLview_ICAFRC { left:0px; top:0px; height:auto; width:100%;}
-#ICA_TBL {background:inherit;}
-#Header_ICATBL { display:block; width:100%; height:40px; left:0px; top:0px;}
-#HTMLview_ICATBL_scroller { display:block; overflow:hidden; width:auto; height:auto; left:auto; top:auto;}
-#HTMLview_ICATBL { left:0px; top:0px; height:auto; width:100%;}
-#ICA_PAO {background:inherit;}
-#Header_ICAPAO { display:block; width:100%; height:40px; left:0px; top:0px;}
-#HTMLview_ICAPAO_scroller { display:block; overflow:hidden; width:auto; height:auto; left:auto; top:auto;}
-#HTMLview_ICAPAO { left:0px; top:0px; height:auto; width:100%;}
-#GES {background:inherit;}
-#FooterBar_GES {position:absolute; display:block;top:auto; height:auto; width:100%; height:auto; left:0px; bottom:0px;}
-#Header_GES { display:block; width:100%; height:40px; left:0px; top:0px;}
-#ListGES_scroller { display:block; overflow:hidden; width:100%; height:auto; left:auto; top:auto;}
-#ListGES { display:block; left:auto; top:auto;}
-#List_GesSESSIONS_scroller { display:block; overflow:hidden; width:auto; height:auto; left:auto; top:auto;}
-#List_GesSESSIONS { display:block; left:auto; top:auto;}
-#Ges_JRN {background:inherit;}
-#Header_GesJRN { display:block; width:100%; height:40px; left:0px; top:0px;}
-#HTMLview_JRN_scroller { display:block; overflow:hidden; width:auto; height:auto; left:auto; top:auto;}
-#HTMLview_JRN { left:0px; top:0px; height:auto; width:100%;}
-#Ges_CPT {background:inherit;}
-#Header_GesCPT { display:block; width:100%; height:40px; left:0px; top:0px;}
-#HTMLview_CPT_scroller { display:block; overflow:hidden; width:auto; height:auto; left:auto; top:auto;}
-#HTMLview_CPT { left:0px; top:0px; height:auto; width:100%;}
-#Ges_JEU {background:inherit;}
-#Header_GesJEU { display:block; width:100%; height:40px; left:0px; top:0px;}
-#HTMLview_JEU_scroller { display:block; overflow:hidden; width:auto; height:auto; left:auto; top:auto;}
-#HTMLview_JEU { left:0px; top:0px; height:auto; width:100%;}
-#Ges_LVR {background:inherit;}
-#Header_GesLVR { display:block; width:100%; height:40px; left:0px; top:0px;}
-#HTMLview_LVR_scroller { display:block; overflow:hidden; width:auto; height:auto; left:auto; top:auto;}
-#HTMLview_LVR { left:0px; top:0px; height:auto; width:100%;}
-#Ges_REF {background:inherit;}
-#Header_GesREF { display:block; width:100%; height:40px; left:0px; top:0px;}
-#HTMLview_REF_scroller { display:block; overflow:hidden; width:auto; height:auto; left:auto; top:auto;}
-#HTMLview_REF { left:0px; top:0px; height:auto; width:100%;}
-#ECO {background:inherit;}
-#FooterBar_ECO {position:absolute; display:block;top:auto; height:auto; width:100%; height:auto; left:0px; bottom:0px;}
-#Header_ECO { display:block; width:100%; height:40px; left:0px; top:0px;}
-#List_ECO_scroller { display:block; overflow:hidden; width:100%; height:auto; left:auto; top:auto;}
-#List_ECO { display:block; left:auto; top:auto;}
-#Eco_LVR {background:inherit;}
-#Header_EcoLVR { display:block; width:100%; height:40px; left:0px; top:0px;}
-#HTMLviewEcoLVR_scroller { display:block; overflow:hidden; width:auto; height:auto; left:auto; top:auto;}
-#HTMLviewEcoLVR { left:0px; top:0px; height:auto; width:100%;}
-#Eco_REF {background:inherit;}
-#Header_EcoREF { display:block; width:100%; height:40px; left:0px; top:0px;}
-#HTMLview_EcoREF_scroller { display:block; overflow:hidden; width:auto; height:auto; left:auto; top:auto;}
-#HTMLview_EcoREF { left:0px; top:0px; height:auto; width:100%;}
-#DIS {background:inherit;}
-#Header_DIS { display:block; width:100%; height:40px; left:0px; top:0px;}
-#HTMLview_DIS_scroller { display:block; overflow:hidden; width:auto; height:auto; left:auto; top:auto;}
-#HTMLview_DIS { left:0px; top:0px; height:auto; width:100%;}
-#CTC {background:inherit;}
-#Header_CTC { display:block; width:100%; height:40px; left:0px; top:0px;}
-#Label_CTC { display:block; left:auto; right:auto; top:auto; bottom:auto; height:auto; width:auto;}
-</style>
-<style>
-*{margin:0;padding:0}
-table {height:100%;width:100%;table-layout:static;border-collapse:collapse}
-iframe {height:100%;width:100%}
-.content {height:100%}
-</style>
-
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ecol2com</title>
+    <meta name="author" content="Antoine Melo" />
+    <meta name="description" content="ecol2com" />
+    <meta name="keywords"  content="Information Communication Administration, Gestion, Economie" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="Resource-type" content="Document" />
+    <meta name="robots" content="ALL" />
+    <link rel="stylesheet" type="text/css" href="css/font.css" />
+    <link rel="stylesheet" type="text/css" href="css/combined.min.css" />
 </head>
-<body style="margin:0px;-ms-touch-action:none;font-family:-apple-system, '.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue';">
-<noscript><h1>JavaScript must be enabled!</h1></noscript>
-<div data-role="page" id="NSBPage" data-theme="a" style="position:absolute; width:100%; height:100%; background-color:inherit; ">
-<a name='/HOM' data-role=none></a>
-<div id="HOM" class="nsb-form" style="position:static; display:none; height: 100vh; top:0px; left:0px; width:100%; ">
-<script>
-HOM.innerHTML=[
-  "<div id='entete_HOM' class='' data-nsb-type=Header style='cursor:default;text-align:center; text-shadow:none; font-size:16px; font-weight:bold; background-color:lightgray;  '>","<div id=entete_HOM_addChild>",,"</div>","ecol2com</div>",
-  NSB.NavBar_jqm14('NavBar_HOM', 'ICA, GES, ECO, DIS', '', '', 'none', '0', ' ', ''),
-  "<div id='Label_HOM' class='' data-nsb-type=Label style='cursor:default;text-align:center; text-shadow:none; margin-left:5px; margin-right:5px; font-size:16px; '><br>\u000A<i>Des solutions et documents de formation en commerce, ouverts, simplement.</i></div>",
-  NSB.FooterBar_jqm14('FooterBar_HOM', 'contact @', '', '', 'none', '0', ' ', ''),
-  ].join('');
-</script>
+<body>
+
+<header class="header animate">
+    <div class="header-wrapper">
+        <h1 class="header-logo"><span class="logo-end">: :</span> ecol2app<span class="logo-end">_</span></h1>
+        <ul class="header-menu">
+            <li><a href="#projects">Domaines</a></li>
+            <li><a href="#photos">Outils</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://twitter.com/_lien" target="_blank" class="no-link icon-twitter"></a></li>
+        </ul>
+        <a class="header-burgerMenu no-link" href="#"><span></span></a>
+    </div>
+</header>
+
+<div class="hero" data-anchor="">
+    <h3>Des solutions et documents de formation en commerce, ouverts, simplement</h3>
+
+    <p class="stars">
+        <span>120</span><i class="icon-star" aria-hidden="true"></i> fantastiques contributeurs
+    </p>
 </div>
-<a name='/ICA' data-role=none></a>
-<div id="ICA" class="nsb-form" style="position:static; display:none; height: 100vh; top:0px; left:0px; width:100%; ">
-<script>
-ICA.innerHTML=[
-  NSB.FooterBar_jqm14('FooterBar_ICA', 'GES, ECO', '', '', 'none', '0', ' ', ''),
-  NSB.HeaderBar_jqm14('Header_ICA', 'ICA / ecol2com', 'retour', 'arrow-l', 'left', '', 'arrow-r', 'none', ' style="" class=" "', '', ''),
-  NSB.List_jqm14('List_ICA', 'ol', 'none', '', 'b', 'Documentations, Internet & informatique, Traitement de texte, Correspondance, Fran\u00E7ais commercial, Tableur, Pr\u00E9sentation assist\u00E9e d\'un ordinateur (PAO)', '', 'Y,N,N', '', 'class=" "', '100%', false, false, 'false', 'arrow-r', 'false', '', 'false', 'false'),
-  NSB.List_jqm14('List_ICASESSIONS', 'ol', 'none', '', 'b', 'Sessions, Notions, Approfondir, Expert', '', 'Y,N,N', '', 'class=" "', 'auto', false, false, 'false', 'arrow-r', 'false', '', 'false', 'false'),
-  ].join('');
-</script>
+
+<div class="ripple-wrapper"></div>
+<ul class="projects" data-anchor="projects">
+    <li class="project project-fullpage ripple">
+        <div class="project-actions">
+            <a href="#fullpage" class="project-link icon-link no-link"></a>
+            <div class="project-close-info icon-cancel icon-cancel"></div>
+            <div class="project-info">i</div>
+        </div>
+
+        <div class="project-image"></div>
+        <a href="#fullpage" class="project-content ">
+            <h3 class="project-title"><span>projet_ex</span></h3>
+            <span class="project-underline"></span>
+            <div class="project-description"><span>Explications projet 1</span></div>
+        </a>
+    </li>
+    <li class="project project-pagepiling ripple">
+        <div class="project-actions">
+            <a href="#pagepiling" class="project-link icon-link no-link"></a>
+            <div class="project-close-info icon-cancel"></div>
+            <div class="project-info">i</div>
+        </div>
+
+        <div class="project-image"></div>
+        <a href="#pagepiling" class="project-content">
+            <h3 class="project-title"><span>projet_th</span></h3>
+            <span class="project-underline"></span>
+            <div class="project-description"><span>Explications projet 2</span></div>
+        </a>
+    </li>
+    <li class="project project-multiscroll ripple">
+        <div class="project-actions">
+            <a href="#multiscroll" class="project-link icon-link no-link"></a>
+            <div class="project-close-info icon-cancel"></div>
+            <div class="project-info">i</div>
+        </div>
+
+        <div class="project-image"></div>
+        <a href="#multiscroll" class="project-content">
+            <h3 class="project-title"><span>Projet_rev</span></h3>
+            <span class="project-underline"></span>
+            <div class="project-description"><span>Explications projet 3</span></div>
+        </a>
+    </li>
+    <li class="project project-funnytext ripple">
+        <div class="project-actions">
+            <a href="#funnytext" class="project-link icon-link no-link"></a>
+            <div class="project-close-info icon-cancel"></div>
+            <div class="project-info">i</div>
+        </div>
+
+        <div class="project-image"></div>
+        <a href="#funnytext" class="project-content">
+            <h3 class="project-title"><span>divers_qr</span></h3>
+            <span class="project-underline"></span>
+            <div class="project-description"><span>Explications divers 1</span></div>
+        </a>
+    </li>
+    <li class="project project-validpic ripple">
+        <div class="project-actions">
+            <a href="#validpic" class="project-link icon-link no-link"></a>
+            <div class="project-close-info icon-cancel"></div>
+            <div class="project-info">i</div>
+        </div>
+
+        <div class="project-image"></div>
+        <a href="#validpic" class="project-content">
+            <h3 class="project-title"><span>divers_doc</span></h3>
+            <span class="project-underline"></span>
+            <div class="project-description"><span>Explications divers 2</span></div>
+        </a>
+    </li>
+    <li class="project project-websites ripple">
+        <div class="project-actions">
+            <a href="#websites" class="project-link icon-link no-link"></a>
+            <div class="project-close-info icon-cancel"></div>
+            <div class="project-info">i</div>
+        </div>
+
+        <div class="project-image"></div>
+        <a href="#websites" class="project-content">
+            <h3 class="project-title"><span>divers_actu</span></h3>
+            <span class="project-underline"></span>
+            <div class="project-description"><span>Explications divers 3</span></div>
+        </a>
+    </li>
+</ul>
+
+<div class="about" data-anchor="about">
+    <div class="text-wrap animate-text">
+        <h2>À propos<span class="logo-end">_</span></h2>
+        <p class="text-intro">
+           Intro
+        </p>
+        <p>
+			Texte
+        </p>
+    </div>
 </div>
-<a name='/ICA_INF' data-role=none></a>
-<div id="ICA_INF" class="nsb-form" style="position:static; display:none; height: 100vh; top:0px; left:0px; width:100%; ">
-<script>
-ICA_INF.innerHTML=[
-  NSB.HeaderBar_jqm14('Header_ICAINF', 'ICA / Informatique', 'retour', 'arrow-l', 'left', '', 'arrow-r', 'none', ' style="" class=" "', '', ''),
-  "<div id='HTMLview_ICAINF_scroller' class=''   style='   ' name=''><div id='HTMLview_ICAINF' style='overflow:auto; height:auto; width:auto;;'>\u00E0 venir.... merci pour votre patience.</div></div>",
-  ].join('');
-</script>
+
+<div class="photos" data-anchor="photos">
+    <div class="text-wrap animate-text">
+        <h2>Multimédia<span class="logo-end">_</span></h2>
+       	<p class="text-intro">
+			Intro
+		</p>
+		<p>
+			Texte
+		</p>
+	</div>
 </div>
-<a name='/ICA_TDT' data-role=none></a>
-<div id="ICA_TDT" class="nsb-form" style="position:static; display:none; height: 100vh; top:0px; left:0px; width:100%; ">
-<script>
-ICA_TDT.innerHTML=[
-  NSB.HeaderBar_jqm14('Header_ICATDT', 'ICA / Textes', 'retour', 'arrow-l', 'left', '', 'arrow-r', 'none', ' style="" class=" "', '', ''),
-  "<div id='HTMLview_ICATDT_scroller' class=''   style='   ' name=''><div id='HTMLview_ICATDT' style='overflow:auto; height:auto; width:auto;;'><table><tr><td style=\"height:600px\" class=\"content\"><iframe src=\"http://ecol2.com/ecol2com/filter/links/index.html?c=ICA_TT&c=Transparent&c=THEO.&c=DIDA.&c=EVAL.&c=EXER.&c=FAQS&c=RESU.&c=MEDIA&c=SITE\" frameborder=\"0\"></iframe></td></tr></table></div></div>",
-  ].join('');
-</script>
+
+<div class="contact"  data-anchor="contact">
+    <div class="text-wrap animate-text">
+        <h2>Échanger<span class="logo-end">_</span></h2>
+        <p class="text-intro">
+            Nous adorons vous lire :-) N'hésitez pas à nous contacter
+        </p>
+
+        <form action="contact.php" method="POST" id="contact-form">
+            <div class="input-text">
+                <label class="input-text-placeholder" for="form-name">Nom</label>
+                <input type="text" id="form-name" name="form-name" required />
+            </div>
+
+            <div class="input-text">
+                <label class="input-text-placeholder" for="form-email">Courriel</label>
+                <input type="email" id="form-email" name="form-email" required />
+            </div>
+
+            <div class="input-text input-textarea">
+                <label class="input-text-placeholder" for="form-body">Êtes vous un robot? Combien font <span id="human-1"></span> + <span id="human-2"></span>?</label>
+                <input type="text" id="form-anti-bots-answer" name="form-answer" required />
+            </div>
+
+            <div class="input-text input-textarea">
+                <label class="input-text-placeholder" for="form-body">Message</label>
+                <textarea id="form-body" name="form-body" required></textarea>
+            </div>
+
+            <div class="contact-newsletter-warning">
+                Vous pouvez également nous joindre au ... ou à l'adresse @
+            </div>
+
+            <input type="text" name="surname" id="form-surname"/>
+
+            <button class="item-button contact-button">Envoyer</button>
+        </form>
+    </div>
 </div>
-<a name='/ICA_COR' data-role=none></a>
-<div id="ICA_COR" class="nsb-form" style="position:static; display:none; height: 100vh; top:0px; left:0px; width:100%; ">
-<script>
-ICA_COR.innerHTML=[
-  NSB.HeaderBar_jqm14('Header_ICACOR', 'ICA / Corespondance', 'retour', 'arrow-l', 'left', '', 'arrow-r', 'none', ' style="" class=" "', '', ''),
-  "<div id='HTMLview_ICACOR_scroller' class=''   style='   ' name=''><div id='HTMLview_ICACOR' style='overflow:auto; height:auto; width:auto;;'><table><tr><td style=\"height:600px\" class=\"content\"><iframe src=\"http://ecol2.com/ecol2com/filter/links/index.html?c=ICA_CorCom&c=THEO.&c=DIDA.&c=EVAL.&c=EXER.&c=FAQS&c=RESU.&c=MEDIA&c=SITE\" frameborder=\"0\"></iframe></td></tr></table></div></div>",
-  ].join('');
-</script>
+
+<ul class="social-links">
+    <li><a href="https://twitter.com/:lien" class="icon-twitter"></a></li>
+    <li><a href="https://github.com/_lien" class="icon-github-circled"></a></li>
+    <li><a href="http://linkedin.com/_lien" class="icon-linkedin no-link"></a></li>
+</ul>
+
+<div class="info animated" tabindex="1">
+    <div class="info-bg"></div>
+    <a href="#" class="info-close no-link"></a>
+    
+    <div class="info-content info-fullpage animated fadeInDown">
+        <div class="text-wrap ">
+            <h2>projet 1</h2>
+			<p class="info-stars" data-name="projet_1">
+            	<span></span>
+            	<i class="icon-star" aria-hidden="true"></i>
+            	<a href="">sur ...</a>
+        	</p>
+            <p class="text-intro">
+                Intro
+            </p>
+            <p>
+                image
+            </p>
+            <p>
+                Texte
+			</p>
+            <h3>Sous titre</h3>
+            <p>
+                Texte
+            </p>
+            <button class="item-button info-close-button">&lt; revenir</button>
+        </div>
+    </div>
+
+	<div class="info-content info-pagepiling animated fadeInDown ">
+        <div class="text-wrap ">
+            <h2>projet 2</h2>
+			<p class="info-stars" data-name="projet_2">
+            	<span></span>
+            	<i class="icon-star" aria-hidden="true"></i>
+            	<a href="">sur ...</a>
+        	</p>
+            <p class="text-intro">
+                Intro
+            </p>
+            <p>
+                image
+            </p>
+            <p>
+                Texte
+			</p>
+            <h3>Sous titre</h3>
+            <p>
+                Texte
+            </p>
+            <button class="item-button info-close-button">&lt; revenir</button>
+        </div>
+    </div>
+
+    <div class="info-content info-multiscroll animated fadeInDown">
+        <div class="text-wrap ">
+            <h2>Projet 3</h2>
+			<p class="info-stars" data-name="projet_3">
+            	<span></span>
+            	<i class="icon-star" aria-hidden="true"></i>
+            	<a href="">sur ...</a>
+        	</p>
+            <p class="text-intro">
+                Intro
+            </p>
+            <p>
+                image
+            </p>
+            <p>
+                Texte
+			</p>
+            <h3>Sous titre</h3>
+            <p>
+                Texte
+            </p>
+            <button class="item-button info-close-button">&lt; revenir</button>
+        </div>
+    </div>
+
+    <div class="info-content info-funnytext animated fadeInDown">
+        <div class="text-wrap ">
+            <h2>divers 1</h2>
+			<p class="info-stars" data-name="divers_1">
+            	<span></span>
+            	<i class="icon-star" aria-hidden="true"></i>
+            	<a href="">sur ...</a>
+        	</p>
+            <p class="text-intro">
+                Intro
+            </p>
+            <p>
+                image
+            </p>
+            <p>
+                Texte
+			</p>
+            <h3>Sous titre</h3>
+            <p>
+                Texte
+            </p>
+            <button class="item-button info-close-button">&lt; revenir</button>
+        </div>
+    </div>
+
+    <div class="info-content info-validpic animated fadeInDown">
+        <div class="text-wrap ">
+            <h2>divers 2</h2>
+			<p class="info-stars" data-name="divers_2">
+            	<span></span>
+            	<i class="icon-star" aria-hidden="true"></i>
+            	<a href="">sur ...</a>
+        	</p>
+            <p class="text-intro">
+                Intro
+            </p>
+            <p>
+                image
+            </p>
+            <p>
+                Texte
+			</p>
+            <h3>Sous titre</h3>
+            <p>
+                Texte
+            </p>
+            <button class="item-button info-close-button">&lt; revenir</button>
+        </div>
+    </div>
+
+    <div class="info-content info-websites animated fadeInDown">
+        <div class="text-wrap ">
+            <h2>divers 3</h2>
+            <p class="text-intro">
+                Intro
+            </p>
+            <div class="info-websites-websites">
+                <h3>Sous-titre 1</h3>
+                <div class="info-website first">
+                    <div class="info-website-preview">
+                        <img src="" data-src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDI0MiAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MjAwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTVhMGEzNmJiNWQgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMnB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNWEwYTM2YmI1ZCI+PHJlY3Qgd2lkdGg9IjI0MiIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI4OS44NTkzNzUiIHk9IjEwNS4xIj4yNDJ4MjAwPC90ZXh0PjwvZz48L2c+PC9zdmc+" alt="" />
+                        <h4>Titre image</h4>
+                        <a href="" target="_blank" class="info-website-preview-url">lien</a>
+                    </div>
+                    <div class="info-website-description">
+                        <p>
+                            Texte
+                        </p>
+                    </div>
+                </div>
+                <div class="info-website">
+                    <div class="info-website-preview">
+                        <img src="" data-src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDI0MiAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MjAwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTVhMGEzNmJiNWQgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMnB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNWEwYTM2YmI1ZCI+PHJlY3Qgd2lkdGg9IjI0MiIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI4OS44NTkzNzUiIHk9IjEwNS4xIj4yNDJ4MjAwPC90ZXh0PjwvZz48L2c+PC9zdmc+" alt="" />
+                        <h4>Titre image</h4>
+                        <a href="" target="_blank" class="info-website-preview-url">lien</a>
+                    </div>
+                    <div class="info-website-description">
+                        <p>
+                            Texte
+                        </p>
+                    </div>
+                </div>
+                </div>
+            <button class="item-button info-close-button">&lt; revenir</button>
+            </div>
+        </div>
+    </div>
 </div>
-<a name='/ICA_FRC' data-role=none></a>
-<div id="ICA_FRC" class="nsb-form" style="position:static; display:none; height: 100vh; top:0px; left:0px; width:100%; ">
-<script>
-ICA_FRC.innerHTML=[
-  NSB.HeaderBar_jqm14('Header_ICAFRC', 'ICA / Français', 'retour', 'arrow-l', 'left', '', 'arrow-r', 'none', ' style="" class=" "', '', ''),
-  "<div id='HTMLview_ICAFRC_scroller' class=''   style='   ' name=''><div id='HTMLview_ICAFRC' style='overflow:auto; height:auto; width:auto;;'><table><tr><td style=\"height:600px\" class=\"content\"><iframe src=\"http://ecol2.com/ecol2com/filter/links/index.html?c=ICA_FrCom&c=Transparent&c=THEO.&c=DIDA.&c=EVAL.&c=EXER.&c=FAQS&c=RESU.&c=MEDIA&c=SITE\" frameborder=\"0\"></iframe></td></tr></table></div></div>",
-  ].join('');
-</script>
+
+<div class="footer">
+    <p class="footer-by">modèle fourni par <a href="https://twitter.com/imac2" class="small-link">Alvaro Trigo</a></p>
 </div>
-<a name='/ICA_TBL' data-role=none></a>
-<div id="ICA_TBL" class="nsb-form" style="position:static; display:none; height: 100vh; top:0px; left:0px; width:100%; ">
-<script>
-ICA_TBL.innerHTML=[
-  NSB.HeaderBar_jqm14('Header_ICATBL', 'ICA / Tableur', 'retour', 'arrow-l', 'left', '', 'arrow-r', 'none', ' style="" class=" "', '', ''),
-  "<div id='HTMLview_ICATBL_scroller' class=''   style='   ' name=''><div id='HTMLview_ICATBL' style='overflow:auto; height:auto; width:auto;;'><table><tr><td style=\"height:600px\" class=\"content\"><iframe src=\"http://ecol2.com/ecol2com/filter/links/index.html?c=ICA_TBL&c=Transparent&c=THEO.&c=DIDA.&c=EVAL.&c=EXER.&c=FAQS&c=RESU.&c=MEDIA&c=SITE\" frameborder=\"0\"></iframe></td></tr></table></div></div>",
-  ].join('');
-</script>
+
+<div class="notification">
+    <span class="notification-message"></span>
+    <span class="notification-close close-x-wrapper">
+        <a href="#" class="close-x no-link"></a>
+    </span>
 </div>
-<a name='/ICA_PAO' data-role=none></a>
-<div id="ICA_PAO" class="nsb-form" style="position:static; display:none; height: 100vh; top:0px; left:0px; width:100%; ">
-<script>
-ICA_PAO.innerHTML=[
-  NSB.HeaderBar_jqm14('Header_ICAPAO', 'ICA / PAO', 'retour', 'arrow-l', 'left', '', 'arrow-r', 'none', ' style="" class=" "', '', ''),
-  "<div id='HTMLview_ICAPAO_scroller' class=''   style='   ' name=''><div id='HTMLview_ICAPAO' style='overflow:auto; height:auto; width:auto;;'><table><tr><td style=\"height:600px\" class=\"content\"><iframe src=\"http://ecol2.com/ecol2com/filter/links/index.html?c=ICA_Pres&c=Transparent&c=THEO.&c=DIDA.&c=EVAL.&c=EXER.&c=FAQS&c=RESU.&c=MEDIA&c=SITE\" frameborder=\"0\"></iframe></td></tr></table></div></div>",
-  ].join('');
-</script>
-</div>
-<a name='/GES' data-role=none></a>
-<div id="GES" class="nsb-form" style="position:static; display:none; height: 100vh; top:0px; left:0px; width:100%; ">
-<script>
-GES.innerHTML=[
-  NSB.FooterBar_jqm14('FooterBar_GES', 'ICA, ECO', '', '', 'none', '0', ' ', ''),
-  NSB.HeaderBar_jqm14('Header_GES', 'GES / ecol2com', 'retour', 'arrow-l', 'left', '', 'arrow-r', 'none', ' style="" class=" "', '', ''),
-  NSB.List_jqm14('ListGES', 'ul', 'none', '', 'b', 'Documentation, Journaux comptables interactifs, Syst\u00E8me de gestion comptable, Jeu s\u00E9rieux, Livre de r\u00E9f\u00E9rence, Autres r\u00E9f\u00E9rences', '', 'Y,N,N', '', 'class=" "', '100%', false, false, 'false', 'arrow-r', 'false', '', 'false', 'false'),
-  NSB.List_jqm14('List_GesSESSIONS', 'ol', 'none', '', 'b', 'Sessions, Notions, Approfondir, Expert', '', 'Y,N,N', '', 'class=" "', 'auto', false, false, 'false', 'arrow-r', 'false', '', 'false', 'false'),
-  ].join('');
-</script>
-</div>
-<a name='/Ges_JRN' data-role=none></a>
-<div id="Ges_JRN" class="nsb-form" style="position:static; display:none; height: 100vh; top:0px; left:0px; width:100%; ">
-<script>
-Ges_JRN.innerHTML=[
-  NSB.HeaderBar_jqm14('Header_GesJRN', 'GES / Journal', 'retour', 'arrow-l', 'left', '', 'arrow-r', 'none', ' style="" class=" "', '', ''),
-  "<div id='HTMLview_JRN_scroller' class=''   style='   ' name=''><div id='HTMLview_JRN' style='overflow:auto; height:auto; width:auto;;'><table><tr><td style=\"height:600px\" class=\"content\"><iframe src=\"http://ecol2.com/ecol2com/journal\" frameborder=\"0\"></iframe></td></tr></table></div></div>",
-  ].join('');
-</script>
-</div>
-<a name='/Ges_CPT' data-role=none></a>
-<div id="Ges_CPT" class="nsb-form" style="position:static; display:none; height: 100vh; top:0px; left:0px; width:100%; ">
-<script>
-Ges_CPT.innerHTML=[
-  NSB.HeaderBar_jqm14('Header_GesCPT', 'GES / Comptabilité', 'retour', 'arrow-l', 'left', '', 'arrow-r', 'none', ' style="" class=" "', '', ''),
-  "<div id='HTMLview_CPT_scroller' class=''   style='   ' name=''><div id='HTMLview_CPT' style='overflow:auto; height:auto; width:auto;;'><table><tr><td style=\"height:600px\" class=\"content\"><iframe src=\"http://ecol2.com/ecol2com/tools/compta/\" frameborder=\"0\"></iframe></td></tr></table></div></div>",
-  ].join('');
-</script>
-</div>
-<a name='/Ges_JEU' data-role=none></a>
-<div id="Ges_JEU" class="nsb-form" style="position:static; display:none; height: 100vh; top:0px; left:0px; width:100%; ">
-<script>
-Ges_JEU.innerHTML=[
-  NSB.HeaderBar_jqm14('Header_GesJEU', 'GES / Jeux', 'retour', 'arrow-l', 'left', '', 'arrow-r', 'none', ' style="" class=" "', '', ''),
-  "<div id='HTMLview_JEU_scroller' class=''   style='   ' name=''><div id='HTMLview_JEU' style='overflow:auto; height:auto; width:auto;;'><table><tr><td style=\"height:600px\" class=\"content\"><iframe src=\"http://ecol2.com/ecol2com/tools/rt/\" frameborder=\"0\"></iframe></td></tr></table></div></div>",
-  ].join('');
-</script>
-</div>
-<a name='/Ges_LVR' data-role=none></a>
-<div id="Ges_LVR" class="nsb-form" style="position:static; display:none; height: 100vh; top:0px; left:0px; width:100%; ">
-<script>
-Ges_LVR.innerHTML=[
-  NSB.HeaderBar_jqm14('Header_GesLVR', 'GES / Référence', 'retour', 'arrow-l', 'left', '', 'arrow-r', 'none', ' style="" class=" "', '', ''),
-  "<div id='HTMLview_LVR_scroller' class=''   style='   ' name=''><div id='HTMLview_LVR' style='overflow:auto; height:auto; width:auto;;'><table><tr><td style=\"height:600px\" class=\"content\"><iframe src=\"http://ecol2.com/wiki/lib/exe/fetch.php?media=gestion_1234print.pdf\" frameborder=\"0\"></iframe></td></tr></table></div></div>",
-  ].join('');
-</script>
-</div>
-<a name='/Ges_REF' data-role=none></a>
-<div id="Ges_REF" class="nsb-form" style="position:static; display:none; height: 100vh; top:0px; left:0px; width:100%; ">
-<script>
-Ges_REF.innerHTML=[
-  NSB.HeaderBar_jqm14('Header_GesREF', 'GES / Référence', 'retour', 'arrow-l', 'left', '', 'arrow-r', 'none', ' style="" class=" "', '', ''),
-  "<div id='HTMLview_REF_scroller' class=''   style='   ' name=''><div id='HTMLview_REF' style='overflow:auto; height:auto; width:auto;;'><table><tr><td style=\"height:600px\" class=\"content\"><iframe src=\"http://ecol2.com/ecol2com/filter/links/index.html?c=GES_ActiCom&c=GES_Bilan&c=GES_CalCom&c=GES_Resultat&c=GES_Envi&c=GES_Docs&c=THEO.&c=DIDA.&c=EVAL.&c=EXER.&c=FAQS&c=RESU.&c=MEDIA&c=SITE\" frameborder=\"0\"></iframe></td></tr></table></div></div>",
-  ].join('');
-</script>
-</div>
-<a name='/ECO' data-role=none></a>
-<div id="ECO" class="nsb-form" style="position:static; display:none; height: 100vh; top:0px; left:0px; width:100%; ">
-<script>
-ECO.innerHTML=[
-  NSB.FooterBar_jqm14('FooterBar_ECO', 'GES, ICA', '', '', 'none', '0', ' ', ''),
-  NSB.HeaderBar_jqm14('Header_ECO', 'ECO / ecol2com', 'retour', 'arrow-l', 'left', '', 'arrow-r', 'none', ' style="" class=" "', '', ''),
-  NSB.List_jqm14('List_ECO', 'ul', 'none', '', 'b', 'Documentation, Livre de r\u00E9f\u00E9rence, Autres r\u00E9f\u00E9rences', '', 'Y,N,N', '', 'class=" "', '100%', false, false, 'false', 'arrow-r', 'false', '', 'false', 'false'),
-  ].join('');
-</script>
-</div>
-<a name='/Eco_LVR' data-role=none></a>
-<div id="Eco_LVR" class="nsb-form" style="position:static; display:none; height: 100vh; top:0px; left:0px; width:100%; ">
-<script>
-Eco_LVR.innerHTML=[
-  NSB.HeaderBar_jqm14('Header_EcoLVR', 'ECO / Référence', 'retour', 'arrow-l', 'left', '', 'arrow-r', 'none', ' style="" class=" "', '', ''),
-  "<div id='HTMLviewEcoLVR_scroller' class=''   style='   ' name=''><div id='HTMLviewEcoLVR' style='overflow:auto; height:auto; width:auto;;'><table><tr><td style=\"height:600px\" class=\"content\"><iframe src=\"http://ecol2.com/wiki/lib/exe/fetch.php?media=ecopo_123yinterior.pdf\" frameborder=\"0\"></iframe></td></tr></table></div></div>",
-  ].join('');
-</script>
-</div>
-<a name='/Eco_REF' data-role=none></a>
-<div id="Eco_REF" class="nsb-form" style="position:static; display:none; height: 100vh; top:0px; left:0px; width:100%; ">
-<script>
-Eco_REF.innerHTML=[
-  NSB.HeaderBar_jqm14('Header_EcoREF', 'GES / Référence', 'retour', 'arrow-l', 'left', '', 'arrow-r', 'none', ' style="" class=" "', '', ''),
-  "<div id='HTMLview_EcoREF_scroller' class=''   style='   ' name=''><div id='HTMLview_EcoREF' style='overflow:auto; height:auto; width:auto;;'><table><tr><td style=\"height:600px\" class=\"content\"><iframe src=\"http://ecol2.com/ecol2com/filter/links/index.html?c=ECO_BaseEco&c=ECO_Gen&c=ECO_Etat&c=Transparent&c=THEO.&c=DIDA.&c=EVAL.&c=EXER.&c=FAQS&c=RESU.&c=MEDIA&c=SITE#\" frameborder=\"0\"></iframe></td></tr></table></div></div>",
-  ].join('');
-</script>
-</div>
-<a name='/DIS' data-role=none></a>
-<div id="DIS" class="nsb-form" style="position:static; display:none; height: 100vh; top:0px; left:0px; width:100%; ">
-<script>
-DIS.innerHTML=[
-  NSB.HeaderBar_jqm14('Header_DIS', 'DIS / ecol2com', 'retour', 'arrow-l', 'left', '', 'arrow-r', 'none', ' style="" class=" "', '', ''),
-  "<div id='HTMLview_DIS_scroller' class=''   style='   ' name=''><div id='HTMLview_DIS' style='overflow:auto; height:auto; width:auto;;'><table><tr><td style=\"height:600px\" class=\"content\"><iframe src=\"http://ecol2.com/ecol2com/tools/grades/\" frameborder=\"0\"></iframe></td></tr></table></div></div>",
-  ].join('');
-</script>
-</div>
-<a name='/CTC' data-role=none></a>
-<div id="CTC" class="nsb-form" style="position:static; display:none; height: 100vh; top:0px; left:0px; width:100%; ">
-<script>
-CTC.innerHTML=[
-  NSB.HeaderBar_jqm14('Header_CTC', '@ ecol2com', 'retour', 'arrow-l', 'left', '', 'arrow-r', 'none', ' style="" class=" "', '', ''),
-  "<div id='Label_CTC' class='' data-nsb-type=Label style='cursor:default; text-shadow:none; margin-left:5px; margin-right:5px; font-size:16px; '><br>\u000A<p>Vous pouvez me contacter en soir\u00E9e au <a href=\"tel:+41227713303\" data-rel=\"external\">+41 22 771 3303</a> ou en m\'envoyant un courriel \u00E0 <a href=\"mailto:antoine.melo@edu.ge.ch\" data-rel=\"external\">antoine.melo@edu.ge.ch</a></p>\u000A<br>\u000A<p>Mon adresse professionnelle est la suivante: ECCG Aim\u00E9e-Stitelmann, 24 rte de Base, 1228 Plan-les-Ouates. Le secr\u00E9tariat est ouvert de 8h \u00E0 17h15, avec une pause entre 12h et 13h15. Vous pouvez les contacter au <a href=\"tel:+41223882050\" data-rel=\"external\">+41 22 388 2050</a>.</p>\u000A<br>\u000A<br>Antoine Melo\u000A<hr>\u000A<p><small>profil <a href=\"https://ch.linkedin.com/in/amelo\">Linkedin </a></small></p>\u000A</div>",
-  ].join('');
-</script>
-</div>
-</div>
-<script>
-if(!navigator.cookieEnabled) NSB.MsgBox('Please turn cookies on.');
-(function(){var all=document.getElementsByTagName('*');for(var i=0;i<all.length;i++)if(all[i].id!=''&&typeof all[i].id!='undefined'&&typeof window[all[i].id]=='undefined')window[all[i].id]=all[i];})()
-var NSB = NSB || {};
-NSB.currentForm = HOM;
-NSB.stopOnError = true;
-NSB.enableBrowserArrows = false;
-NSB.enableNiceLinks = true;
-NSB.enableAppScroll = false;
-NSB.newVersionWarning = false;
-NSB.id = 'ecol2com';
-NSB.voltDashboardAccess = False;
-NSB.voltDomain = '';
-if ($.mobile != undefined) $.mobile.hashListeningEnabled = false;
-if (window.$volt) $volt.init(NSB.voltAppId, NSB.voltDomain);
 
-// ***** Code for form: HOM *****
-window.addEventListener('load', function() {
-  HOM.style.display = 'block';
-  NSB.addProperties(HOM);
-  entete_HOM.style.lineHeight='40px';
-  NSB.addProperties.addChild(entete_HOM);
-  NSB.addProperties(entete_HOM);
-
-  NSB.NavBar_jqm_init('NavBar_HOM','ICA, GES, ECO, DIS');
-  NSB.addProperties(NavBar_HOM);
-  (function(){var d,i,s=''.split(',');for(i=0;i<s.length;i++){if(s[i].trim()!=''){d=document.getElementById('NavBar_HOM_'+i);(function(i){d.onclick=function(){ChangeForm(document.getElementById(s[i]))}})(i)}}})()
-
-  NSB.addProperties(Label_HOM);
-  FooterBar_HOM.refresh=function(){setTimeout(NSB.FooterBarRefresh,10,FooterBar_HOM)};
-  NSB.FooterBar_jqm_init('FooterBar_HOM','contact @');
-  NSB.addProperties(FooterBar_HOM);
-  (function(){var d,i,s=''.split(',');for(i=0;i<s.length;i++){if(s[i].trim()!=''){d=document.getElementById('FooterBar_HOM_'+i);(function(i){d.onclick=function(){ChangeForm(document.getElementById(s[i]))}})(i)}}})()
-  HOM.style.display = 'none';
-}, false);
-
-// ***** Code for form: ICA *****
-window.addEventListener('load', function() {
-  ICA.style.display = 'block';
-  NSB.addProperties(ICA);
-  FooterBar_ICA.refresh=function(){setTimeout(NSB.FooterBarRefresh,10,FooterBar_ICA)};
-  NSB.FooterBar_jqm_init('FooterBar_ICA','GES, ECO');
-  NSB.addProperties(FooterBar_ICA);
-  (function(){var d,i,s=''.split(',');for(i=0;i<s.length;i++){if(s[i].trim()!=''){d=document.getElementById('FooterBar_ICA_'+i);(function(i){d.onclick=function(){ChangeForm(document.getElementById(s[i]))}})(i)}}})()
-  NSB.addProperties(Header_ICA);
-  NSB.addDisableProperty(Header_ICA);
-  if(typeof(Header_ICA.onclick)=='function'){
-    if(typeof(Header_ICA_left)!='undefined') Header_ICA_left.onclick=function() {Header_ICA.onclick(Header_ICA_left.getAttribute('nsbvalue'))};
-    if(typeof(Header_ICA_right)!='undefined') Header_ICA_right.onclick=function() {Header_ICA.onclick(Header_ICA_right.getAttribute('nsbvalue'))}};
-  NSB.List_jqm_init14('List_ICA','Documentations, Internet & informatique, Traitement de texte, Correspondance, Fran\u00E7ais commercial, Tableur, Pr\u00E9sentation assist\u00E9e d\'un ordinateur (PAO)',false,'100%',false,false);
-  List_ICA.refresh=function(){if (typeof List_ICA_ref!='undefined') setTimeout(NSB.refresh,100,List_ICA_ref)};
-  NSB.addProperties(List_ICA);
-  (function(){var d,i,s=''.split(',');for(i=0;i<s.length;i++){if(s[i].trim()!=''){d=document.getElementById('List_ICA_'+i);(function(i){d.onclick=function(){ChangeForm(document.getElementById(s[i].trim()))}})(i)}}})()
-  NSB.List_jqm_init14('List_ICASESSIONS','Sessions, Notions, Approfondir, Expert',false,'auto',false,false);
-  List_ICASESSIONS.refresh=function(){if (typeof List_ICASESSIONS_ref!='undefined') setTimeout(NSB.refresh,100,List_ICASESSIONS_ref)};
-  NSB.addProperties(List_ICASESSIONS);
-  (function(){var d,i,s=''.split(',');for(i=0;i<s.length;i++){if(s[i].trim()!=''){d=document.getElementById('List_ICASESSIONS_'+i);(function(i){d.onclick=function(){ChangeForm(document.getElementById(s[i].trim()))}})(i)}}})()
-  ICA.style.display = 'none';
-}, false);
-
-// ***** Code for form: ICA_INF *****
-window.addEventListener('load', function() {
-  ICA_INF.style.display = 'block';
-  NSB.addProperties(ICA_INF);
-  NSB.addProperties(Header_ICAINF);
-  NSB.addDisableProperty(Header_ICAINF);
-  if(typeof(Header_ICAINF.onclick)=='function'){
-    if(typeof(Header_ICAINF_left)!='undefined') Header_ICAINF_left.onclick=function() {Header_ICAINF.onclick(Header_ICAINF_left.getAttribute('nsbvalue'))};
-    if(typeof(Header_ICAINF_right)!='undefined') Header_ICAINF_right.onclick=function() {Header_ICAINF.onclick(Header_ICAINF_right.getAttribute('nsbvalue'))}};
-
-  NSB.addProperties(HTMLview_ICAINF,HTMLview_ICAINF_scroller);
-  ICA_INF.style.display = 'none';
-}, false);
-
-// ***** Code for form: ICA_TDT *****
-window.addEventListener('load', function() {
-  ICA_TDT.style.display = 'block';
-  NSB.addProperties(ICA_TDT);
-  NSB.addProperties(Header_ICATDT);
-  NSB.addDisableProperty(Header_ICATDT);
-  if(typeof(Header_ICATDT.onclick)=='function'){
-    if(typeof(Header_ICATDT_left)!='undefined') Header_ICATDT_left.onclick=function() {Header_ICATDT.onclick(Header_ICATDT_left.getAttribute('nsbvalue'))};
-    if(typeof(Header_ICATDT_right)!='undefined') Header_ICATDT_right.onclick=function() {Header_ICATDT.onclick(Header_ICATDT_right.getAttribute('nsbvalue'))}};
-
-  NSB.addProperties(HTMLview_ICATDT,HTMLview_ICATDT_scroller);
-  ICA_TDT.style.display = 'none';
-}, false);
-
-// ***** Code for form: ICA_COR *****
-window.addEventListener('load', function() {
-  ICA_COR.style.display = 'block';
-  NSB.addProperties(ICA_COR);
-  NSB.addProperties(Header_ICACOR);
-  NSB.addDisableProperty(Header_ICACOR);
-  if(typeof(Header_ICACOR.onclick)=='function'){
-    if(typeof(Header_ICACOR_left)!='undefined') Header_ICACOR_left.onclick=function() {Header_ICACOR.onclick(Header_ICACOR_left.getAttribute('nsbvalue'))};
-    if(typeof(Header_ICACOR_right)!='undefined') Header_ICACOR_right.onclick=function() {Header_ICACOR.onclick(Header_ICACOR_right.getAttribute('nsbvalue'))}};
-
-  NSB.addProperties(HTMLview_ICACOR,HTMLview_ICACOR_scroller);
-  ICA_COR.style.display = 'none';
-}, false);
-
-// ***** Code for form: ICA_FRC *****
-window.addEventListener('load', function() {
-  ICA_FRC.style.display = 'block';
-  NSB.addProperties(ICA_FRC);
-  NSB.addProperties(Header_ICAFRC);
-  NSB.addDisableProperty(Header_ICAFRC);
-  if(typeof(Header_ICAFRC.onclick)=='function'){
-    if(typeof(Header_ICAFRC_left)!='undefined') Header_ICAFRC_left.onclick=function() {Header_ICAFRC.onclick(Header_ICAFRC_left.getAttribute('nsbvalue'))};
-    if(typeof(Header_ICAFRC_right)!='undefined') Header_ICAFRC_right.onclick=function() {Header_ICAFRC.onclick(Header_ICAFRC_right.getAttribute('nsbvalue'))}};
-
-  NSB.addProperties(HTMLview_ICAFRC,HTMLview_ICAFRC_scroller);
-  ICA_FRC.style.display = 'none';
-}, false);
-
-// ***** Code for form: ICA_TBL *****
-window.addEventListener('load', function() {
-  ICA_TBL.style.display = 'block';
-  NSB.addProperties(ICA_TBL);
-  NSB.addProperties(Header_ICATBL);
-  NSB.addDisableProperty(Header_ICATBL);
-  if(typeof(Header_ICATBL.onclick)=='function'){
-    if(typeof(Header_ICATBL_left)!='undefined') Header_ICATBL_left.onclick=function() {Header_ICATBL.onclick(Header_ICATBL_left.getAttribute('nsbvalue'))};
-    if(typeof(Header_ICATBL_right)!='undefined') Header_ICATBL_right.onclick=function() {Header_ICATBL.onclick(Header_ICATBL_right.getAttribute('nsbvalue'))}};
-
-  NSB.addProperties(HTMLview_ICATBL,HTMLview_ICATBL_scroller);
-  ICA_TBL.style.display = 'none';
-}, false);
-
-// ***** Code for form: ICA_PAO *****
-window.addEventListener('load', function() {
-  ICA_PAO.style.display = 'block';
-  NSB.addProperties(ICA_PAO);
-  NSB.addProperties(Header_ICAPAO);
-  NSB.addDisableProperty(Header_ICAPAO);
-  if(typeof(Header_ICAPAO.onclick)=='function'){
-    if(typeof(Header_ICAPAO_left)!='undefined') Header_ICAPAO_left.onclick=function() {Header_ICAPAO.onclick(Header_ICAPAO_left.getAttribute('nsbvalue'))};
-    if(typeof(Header_ICAPAO_right)!='undefined') Header_ICAPAO_right.onclick=function() {Header_ICAPAO.onclick(Header_ICAPAO_right.getAttribute('nsbvalue'))}};
-
-  NSB.addProperties(HTMLview_ICAPAO,HTMLview_ICAPAO_scroller);
-  ICA_PAO.style.display = 'none';
-}, false);
-
-// ***** Code for form: GES *****
-window.addEventListener('load', function() {
-  GES.style.display = 'block';
-  NSB.addProperties(GES);
-  FooterBar_GES.refresh=function(){setTimeout(NSB.FooterBarRefresh,10,FooterBar_GES)};
-  NSB.FooterBar_jqm_init('FooterBar_GES','ICA, ECO');
-  NSB.addProperties(FooterBar_GES);
-  (function(){var d,i,s=''.split(',');for(i=0;i<s.length;i++){if(s[i].trim()!=''){d=document.getElementById('FooterBar_GES_'+i);(function(i){d.onclick=function(){ChangeForm(document.getElementById(s[i]))}})(i)}}})()
-  NSB.addProperties(Header_GES);
-  NSB.addDisableProperty(Header_GES);
-  if(typeof(Header_GES.onclick)=='function'){
-    if(typeof(Header_GES_left)!='undefined') Header_GES_left.onclick=function() {Header_GES.onclick(Header_GES_left.getAttribute('nsbvalue'))};
-    if(typeof(Header_GES_right)!='undefined') Header_GES_right.onclick=function() {Header_GES.onclick(Header_GES_right.getAttribute('nsbvalue'))}};
-  NSB.List_jqm_init14('ListGES','Documentation, Journaux comptables interactifs, Syst\u00E8me de gestion comptable, Jeu s\u00E9rieux, Livre de r\u00E9f\u00E9rence, Autres r\u00E9f\u00E9rences',false,'100%',false,false);
-  ListGES.refresh=function(){if (typeof ListGES_ref!='undefined') setTimeout(NSB.refresh,100,ListGES_ref)};
-  NSB.addProperties(ListGES);
-  (function(){var d,i,s=', Ges_JRN, Ges_CPT, Ges_JEU, Ges_LVR, Ges_REF'.split(',');for(i=0;i<s.length;i++){if(s[i].trim()!=''){d=document.getElementById('ListGES_'+i);(function(i){d.onclick=function(){ChangeForm(document.getElementById(s[i].trim()))}})(i)}}})()
-  NSB.List_jqm_init14('List_GesSESSIONS','Sessions, Notions, Approfondir, Expert',false,'auto',false,false);
-  List_GesSESSIONS.refresh=function(){if (typeof List_GesSESSIONS_ref!='undefined') setTimeout(NSB.refresh,100,List_GesSESSIONS_ref)};
-  NSB.addProperties(List_GesSESSIONS);
-  (function(){var d,i,s=''.split(',');for(i=0;i<s.length;i++){if(s[i].trim()!=''){d=document.getElementById('List_GesSESSIONS_'+i);(function(i){d.onclick=function(){ChangeForm(document.getElementById(s[i].trim()))}})(i)}}})()
-  GES.style.display = 'none';
-}, false);
-
-// ***** Code for form: Ges_JRN *****
-window.addEventListener('load', function() {
-  Ges_JRN.style.display = 'block';
-  NSB.addProperties(Ges_JRN);
-  NSB.addProperties(Header_GesJRN);
-  NSB.addDisableProperty(Header_GesJRN);
-  if(typeof(Header_GesJRN.onclick)=='function'){
-    if(typeof(Header_GesJRN_left)!='undefined') Header_GesJRN_left.onclick=function() {Header_GesJRN.onclick(Header_GesJRN_left.getAttribute('nsbvalue'))};
-    if(typeof(Header_GesJRN_right)!='undefined') Header_GesJRN_right.onclick=function() {Header_GesJRN.onclick(Header_GesJRN_right.getAttribute('nsbvalue'))}};
-
-  NSB.addProperties(HTMLview_JRN,HTMLview_JRN_scroller);
-  Ges_JRN.style.display = 'none';
-}, false);
-
-// ***** Code for form: Ges_CPT *****
-window.addEventListener('load', function() {
-  Ges_CPT.style.display = 'block';
-  NSB.addProperties(Ges_CPT);
-  NSB.addProperties(Header_GesCPT);
-  NSB.addDisableProperty(Header_GesCPT);
-  if(typeof(Header_GesCPT.onclick)=='function'){
-    if(typeof(Header_GesCPT_left)!='undefined') Header_GesCPT_left.onclick=function() {Header_GesCPT.onclick(Header_GesCPT_left.getAttribute('nsbvalue'))};
-    if(typeof(Header_GesCPT_right)!='undefined') Header_GesCPT_right.onclick=function() {Header_GesCPT.onclick(Header_GesCPT_right.getAttribute('nsbvalue'))}};
-
-  NSB.addProperties(HTMLview_CPT,HTMLview_CPT_scroller);
-  Ges_CPT.style.display = 'none';
-}, false);
-
-// ***** Code for form: Ges_JEU *****
-window.addEventListener('load', function() {
-  Ges_JEU.style.display = 'block';
-  NSB.addProperties(Ges_JEU);
-  NSB.addProperties(Header_GesJEU);
-  NSB.addDisableProperty(Header_GesJEU);
-  if(typeof(Header_GesJEU.onclick)=='function'){
-    if(typeof(Header_GesJEU_left)!='undefined') Header_GesJEU_left.onclick=function() {Header_GesJEU.onclick(Header_GesJEU_left.getAttribute('nsbvalue'))};
-    if(typeof(Header_GesJEU_right)!='undefined') Header_GesJEU_right.onclick=function() {Header_GesJEU.onclick(Header_GesJEU_right.getAttribute('nsbvalue'))}};
-
-  NSB.addProperties(HTMLview_JEU,HTMLview_JEU_scroller);
-  Ges_JEU.style.display = 'none';
-}, false);
-
-// ***** Code for form: Ges_LVR *****
-window.addEventListener('load', function() {
-  Ges_LVR.style.display = 'block';
-  NSB.addProperties(Ges_LVR);
-  NSB.addProperties(Header_GesLVR);
-  NSB.addDisableProperty(Header_GesLVR);
-  if(typeof(Header_GesLVR.onclick)=='function'){
-    if(typeof(Header_GesLVR_left)!='undefined') Header_GesLVR_left.onclick=function() {Header_GesLVR.onclick(Header_GesLVR_left.getAttribute('nsbvalue'))};
-    if(typeof(Header_GesLVR_right)!='undefined') Header_GesLVR_right.onclick=function() {Header_GesLVR.onclick(Header_GesLVR_right.getAttribute('nsbvalue'))}};
-
-  NSB.addProperties(HTMLview_LVR,HTMLview_LVR_scroller);
-  Ges_LVR.style.display = 'none';
-}, false);
-
-// ***** Code for form: Ges_REF *****
-window.addEventListener('load', function() {
-  Ges_REF.style.display = 'block';
-  NSB.addProperties(Ges_REF);
-  NSB.addProperties(Header_GesREF);
-  NSB.addDisableProperty(Header_GesREF);
-  if(typeof(Header_GesREF.onclick)=='function'){
-    if(typeof(Header_GesREF_left)!='undefined') Header_GesREF_left.onclick=function() {Header_GesREF.onclick(Header_GesREF_left.getAttribute('nsbvalue'))};
-    if(typeof(Header_GesREF_right)!='undefined') Header_GesREF_right.onclick=function() {Header_GesREF.onclick(Header_GesREF_right.getAttribute('nsbvalue'))}};
-
-  NSB.addProperties(HTMLview_REF,HTMLview_REF_scroller);
-  Ges_REF.style.display = 'none';
-}, false);
-
-// ***** Code for form: ECO *****
-window.addEventListener('load', function() {
-  ECO.style.display = 'block';
-  NSB.addProperties(ECO);
-  FooterBar_ECO.refresh=function(){setTimeout(NSB.FooterBarRefresh,10,FooterBar_ECO)};
-  NSB.FooterBar_jqm_init('FooterBar_ECO','GES, ICA');
-  NSB.addProperties(FooterBar_ECO);
-  (function(){var d,i,s=''.split(',');for(i=0;i<s.length;i++){if(s[i].trim()!=''){d=document.getElementById('FooterBar_ECO_'+i);(function(i){d.onclick=function(){ChangeForm(document.getElementById(s[i]))}})(i)}}})()
-  NSB.addProperties(Header_ECO);
-  NSB.addDisableProperty(Header_ECO);
-  if(typeof(Header_ECO.onclick)=='function'){
-    if(typeof(Header_ECO_left)!='undefined') Header_ECO_left.onclick=function() {Header_ECO.onclick(Header_ECO_left.getAttribute('nsbvalue'))};
-    if(typeof(Header_ECO_right)!='undefined') Header_ECO_right.onclick=function() {Header_ECO.onclick(Header_ECO_right.getAttribute('nsbvalue'))}};
-  NSB.List_jqm_init14('List_ECO','Documentation, Livre de r\u00E9f\u00E9rence, Autres r\u00E9f\u00E9rences',false,'100%',false,false);
-  List_ECO.refresh=function(){if (typeof List_ECO_ref!='undefined') setTimeout(NSB.refresh,100,List_ECO_ref)};
-  NSB.addProperties(List_ECO);
-  (function(){var d,i,s=', Eco_LVR, Eco_REF'.split(',');for(i=0;i<s.length;i++){if(s[i].trim()!=''){d=document.getElementById('List_ECO_'+i);(function(i){d.onclick=function(){ChangeForm(document.getElementById(s[i].trim()))}})(i)}}})()
-  ECO.style.display = 'none';
-}, false);
-
-// ***** Code for form: Eco_LVR *****
-window.addEventListener('load', function() {
-  Eco_LVR.style.display = 'block';
-  NSB.addProperties(Eco_LVR);
-  NSB.addProperties(Header_EcoLVR);
-  NSB.addDisableProperty(Header_EcoLVR);
-  if(typeof(Header_EcoLVR.onclick)=='function'){
-    if(typeof(Header_EcoLVR_left)!='undefined') Header_EcoLVR_left.onclick=function() {Header_EcoLVR.onclick(Header_EcoLVR_left.getAttribute('nsbvalue'))};
-    if(typeof(Header_EcoLVR_right)!='undefined') Header_EcoLVR_right.onclick=function() {Header_EcoLVR.onclick(Header_EcoLVR_right.getAttribute('nsbvalue'))}};
-
-  NSB.addProperties(HTMLviewEcoLVR,HTMLviewEcoLVR_scroller);
-  Eco_LVR.style.display = 'none';
-}, false);
-
-// ***** Code for form: Eco_REF *****
-window.addEventListener('load', function() {
-  Eco_REF.style.display = 'block';
-  NSB.addProperties(Eco_REF);
-  NSB.addProperties(Header_EcoREF);
-  NSB.addDisableProperty(Header_EcoREF);
-  if(typeof(Header_EcoREF.onclick)=='function'){
-    if(typeof(Header_EcoREF_left)!='undefined') Header_EcoREF_left.onclick=function() {Header_EcoREF.onclick(Header_EcoREF_left.getAttribute('nsbvalue'))};
-    if(typeof(Header_EcoREF_right)!='undefined') Header_EcoREF_right.onclick=function() {Header_EcoREF.onclick(Header_EcoREF_right.getAttribute('nsbvalue'))}};
-
-  NSB.addProperties(HTMLview_EcoREF,HTMLview_EcoREF_scroller);
-  Eco_REF.style.display = 'none';
-}, false);
-
-// ***** Code for form: DIS *****
-window.addEventListener('load', function() {
-  DIS.style.display = 'block';
-  NSB.addProperties(DIS);
-  NSB.addProperties(Header_DIS);
-  NSB.addDisableProperty(Header_DIS);
-  if(typeof(Header_DIS.onclick)=='function'){
-    if(typeof(Header_DIS_left)!='undefined') Header_DIS_left.onclick=function() {Header_DIS.onclick(Header_DIS_left.getAttribute('nsbvalue'))};
-    if(typeof(Header_DIS_right)!='undefined') Header_DIS_right.onclick=function() {Header_DIS.onclick(Header_DIS_right.getAttribute('nsbvalue'))}};
-
-  NSB.addProperties(HTMLview_DIS,HTMLview_DIS_scroller);
-  DIS.style.display = 'none';
-}, false);
-
-// ***** Code for form: CTC *****
-window.addEventListener('load', function() {
-  CTC.style.display = 'block';
-  NSB.addProperties(CTC);
-  NSB.addProperties(Header_CTC);
-  NSB.addDisableProperty(Header_CTC);
-  if(typeof(Header_CTC.onclick)=='function'){
-    if(typeof(Header_CTC_left)!='undefined') Header_CTC_left.onclick=function() {Header_CTC.onclick(Header_CTC_left.getAttribute('nsbvalue'))};
-    if(typeof(Header_CTC_right)!='undefined') Header_CTC_right.onclick=function() {Header_CTC.onclick(Header_CTC_right.getAttribute('nsbvalue'))}};
-
-  NSB.addProperties(Label_CTC);
-  CTC.style.display = 'none';
-}, false);
-
-
-window.addEventListener('orientationchange', function(){window.scrollTo(0,0)});
-window.addEventListener('load', function() {
-  HOM.style.display = 'block';
-  Main();
-  if (typeof(HOM.onshow)=='function') HOM.onshow();
-}, false);
-</script>
-<script src='code.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/combined.min.js?v=3"></script>
 
 </body>
 </html>
